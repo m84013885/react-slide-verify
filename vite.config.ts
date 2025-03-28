@@ -12,8 +12,8 @@ export default defineConfig({
     {
       name: 'copy-dts',
       closeBundle() {
-        const src = 'src/react-select-country.d.ts';
-        const dest = 'dist/react-select-country.d.ts';
+        const src = 'src/react-slide-verify.d.ts';
+        const dest = 'dist/react-slide-verify.d.ts';
         if (existsSync(src)) {
           copyFileSync(src, dest);
         } else {
@@ -30,8 +30,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/App.tsx'),
-      name: 'react-select-country-mw',
-      fileName: (format) => `react-select-country.${format}.js`
+      name: 'react-slide-verify-mw',
+      fileName: (format) => `react-slide-verify.${format}.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
