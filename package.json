@@ -1,0 +1,61 @@
+{
+  "name": "react-slide-verify-mw",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "tiny-pinyin-mw": "^0.0.2"
+  },
+  "keywords": [
+    "select",
+    "country",
+    "region",
+    "select country",
+    "select region"
+  ],
+  "author": "m84013885",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m84013885/react-select-country/issues"
+  },
+  "homepage": "https://github.com/m84013885/react-select-country#readme",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts",
+    "README.md"
+  ],
+  "main": "dist/react-select-country.cjs.js",
+  "module": "dist/react-select-country.esm.js",
+  "exports": {
+    ".": {
+      "types": "./dist/react-select-country.d.ts",
+      "import": "./dist/react-select-country.es.js",
+      "require": "./dist/react-select-country.umd.js"
+    }
+  }
+}
