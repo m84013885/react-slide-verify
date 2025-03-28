@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.14",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
@@ -23,39 +24,37 @@
     "globals": "^15.15.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "tiny-pinyin-mw": "^0.0.2"
+    "react-dom": ">=16.8.0"
   },
   "keywords": [
-    "select",
-    "country",
-    "region",
-    "select country",
-    "select region"
+    "slide",
+    "verify",
+    "slide verify"
   ],
   "author": "m84013885",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/m84013885/react-select-country/issues"
+    "url": "https://github.com/m84013885/react-slide-verify/issues"
   },
-  "homepage": "https://github.com/m84013885/react-select-country#readme",
+  "homepage": "https://github.com/m84013885/react-slide-verify#readme",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
     "index.d.ts",
     "README.md"
   ],
-  "main": "dist/react-select-country.cjs.js",
-  "module": "dist/react-select-country.esm.js",
+  "main": "dist/react-slide-verify.cjs.js",
+  "module": "dist/react-slide-verify.esm.js",
   "exports": {
     ".": {
-      "types": "./dist/react-select-country.d.ts",
-      "import": "./dist/react-select-country.es.js",
-      "require": "./dist/react-select-country.umd.js"
+      "types": "./dist/react-slide-verify.d.ts",
+      "import": "./dist/react-slide-verify.es.js",
+      "require": "./dist/react-slide-verify.umd.js"
     }
   }
 }
