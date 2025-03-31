@@ -6,6 +6,8 @@ interface SlideVerifyProps {
   checkUrl: string;
   onError?: (message: string) => void;
   maxRetries?: number;
+  init?: boolean;
+  retry?: () => void;
 }
 
 interface Challenge {
@@ -15,11 +17,13 @@ interface Challenge {
 }
 
 const SlideVerify: React.FC<SlideVerifyProps> = ({
+  init,
   onSuccess,
   getUrl,
   checkUrl,
   onError,
-  maxRetries = 3
+  maxRetries = 3,
+  retry
 }) => {
   // 状态管理
   const [challenge, setChallenge] = useState<Challenge | null>(null);
@@ -60,8 +64,10 @@ const SlideVerify: React.FC<SlideVerifyProps> = ({
 
   // 初始化
   useEffect(() => {
-    fetchNewChallenge();
-  }, [fetchNewChallenge]);
+    if (init) {
+      fetchNewChallenge();
+    }
+  }, [init]);
 
   // 处理重试
   const handleRetry = useCallback(() => {
@@ -72,7 +78,8 @@ const SlideVerify: React.FC<SlideVerifyProps> = ({
     }
     setRetryCount(prev => prev + 1);
     fetchNewChallenge();
-  }, [retryCount, maxRetries, fetchNewChallenge]);
+    retry?.();
+  }, [retryCount, maxRetries, fetchNewChallenge, retry]);
 
   // 开始滑动
   const handleStart = useCallback((e: React.MouseEvent | React.TouchEvent) => {
